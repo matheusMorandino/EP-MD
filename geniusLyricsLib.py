@@ -44,7 +44,7 @@ def search_data(query,n,access_token):
     access_token = your access token of the genius api
     """
     
-    api = genius.Genius(access_token, timeout=30, retries=10)
+    api = genius.Genius(access_token)
 
     list_lyrics = []
     list_title = []
@@ -56,7 +56,7 @@ def search_data(query,n,access_token):
         try:
             artist = api.search_artist(query,max_songs=n,sort='popularity')
             break
-        except Timeout as e:
+        except:
             print("Timeout during collection, retrying...")
             pass
 
@@ -73,9 +73,12 @@ def search_data(query,n,access_token):
                 except:
                     list_year.append(9999)
             if key == 'album':        # get album name (because of AttributeError)
-                for key2, value2 in value.items():
-                    if key2 == 'name':
-                        list_album.append(value2)
+                try:
+                    for key2, value2 in value.items():
+                        if key2 == 'name':
+                            list_album.append(value2)
+                except:
+                    list_album.append('NONE')
         #list_album.append(song.album) #AttributeError: 'Song' object has no attribute 'album' 11/11/2021
         #list_year.append(song.year)   #AttributeError: 'Song' object has no attribute 'year'  12/11/2021
 
@@ -132,6 +135,8 @@ def create_decades(df):
     df['year'] = df['year'].astype("int")
 
     for year in df['year']:
+        if year < 1960:
+            decades.append("50s")
         if 1960 <= year < 1970:
             decades.append("60s")
         if 1970 <= year < 1980:
@@ -142,8 +147,10 @@ def create_decades(df):
             decades.append("90s")
         if 2000 <= year < 2010:
             decades.append("00s")
-        if 2010 <= year :
+        if 2010 <= year < 2020:
             decades.append("10s")
+        if 2020 <= year :
+            decades.append("20s")
     df['decade'] = decades
     df = df[['artist','title','album','decade','year','date','lyric']]
     return df

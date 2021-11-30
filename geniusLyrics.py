@@ -42,19 +42,25 @@ import nltk.data
 
 access_token = '5yWU82ZtyFHn9FBRC314WtNowapfuTFRwMho-82bR3gCmWFzwaekAV2oYqdHAsLm'
 
-#Extracting the information of the N most popular songs of Metallica
-df0 = build_discography_data(['Metallica', 'Megadeth', 'AC/DC', 'Guns N Roses', 'Iron Maiden', \
-                              'Red Hot Chili Peppers', 'Nirvana', 'Aerosmith', 'The Rolling Stones', \
-                              'Queen', 'U2', 'Judas Priest', 'Bon Jovi', 'Kiss', 'Pink Floyd', 'Dire straits', \
-                              'Ramones', 'Green Day', 'The cure', 'Blondie'],1000,access_token)
+try:
+    df = pd.read_csv("raw.csv")
+except:
+    #Extracting the information of the N most popular songs of Metallica
+    df0 = build_discography_data(['Metallica', 'Megadeth', 'AC/DC', 'Guns N Roses', 'Iron Maiden', \
+                                'Red Hot Chili Peppers', 'Nirvana', 'Aerosmith', 'The Rolling Stones', \
+                                'Queen', 'U2', 'Judas Priest', 'Bon Jovi', 'Kiss', 'Pink Floyd', 'Dire straits', \
+                                'Ramones', 'Green Day', 'The cure', 'Blondie'],1000,access_token)
 
+    df = clean_lyrics(df0,'lyric')
 
 
 ####################################
 ############ STEP 2) cleaning and transforming the data using functions created on helpers script
 ####################################
 
-df = clean_lyrics(df0,'lyric')
+
+df.to_csv('raw.csv',index=False)
+
 df = create_decades(df)
 
 #Filter  data to use songs that have lyrics.
@@ -107,7 +113,8 @@ cv = CountVectorizer(stop_words=stop_words)
 
 #Create a dataframe called data_cv to store the the number of times the word was used in  a lyric based their decades
 text_cv = cv.fit_transform(words_df['words'].iloc[:])
-data_cv = pd.DataFrame(text_cv.toarray(),columns=cv.get_feature_names())
+print(text_cv)
+data_cv = pd.DataFrame(text_cv,columns=cv.get_feature_names())
 data_cv['decade'] = words_df['decade']
 
 #created a dataframe that Sums the ocurrence frequency of each word and group the result by decade
