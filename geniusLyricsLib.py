@@ -2,6 +2,7 @@ import lyricsgenius as genius
 import pandas as pd
 import numpy as np
 import string 
+from tqdm import tqdm
 
 import nltk
 from nltk.tokenize import word_tokenize
@@ -125,11 +126,12 @@ def create_decades(df):
     parameters:
     df = dataframe
     """
+    print(" >> Criando lista de anos")
     years = []
     decades = []
     df['date'].fillna(0)
     df['date'] = df['date'].astype("str")
-    for i in df.index:
+    for i in tqdm(df.index):
         years.append(df['date'].str.split("-")[i][0])
     df['year'] = years
     df['year'] = df['year'].astype("int")

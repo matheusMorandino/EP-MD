@@ -17,6 +17,7 @@ from geniusLyricsLib import *
 import pandas as pd 
 import numpy as np
 import string
+from tqdm import tqdm
 
 #To plot the graphs
 from wordcloud import WordCloud
@@ -59,7 +60,7 @@ except:
 ####################################
 
 
-df.to_csv('raw.csv',index=False)
+#df.to_csv('raw.csv',index=False)
 
 df = create_decades(df)
 
@@ -96,25 +97,23 @@ set_decades = []
 
 #Iterate trought each word and decade and stores them into the new lists
 for i in df.index:
-    for word in df['words'].iloc[i]:
-        set_words.append(word)
-        set_decades.append(df['decade'].iloc[i])
+   for word in df['words'].iloc[i]:
+       set_words.append(word)
+       set_decades.append(df['decade'].iloc[i])
 
-#create the new data frame  with the information of words and decade lists 
+#create the new data frame  with the information of words and decade lists
 words_df = pd.DataFrame({'words':set_words,'decade':set_decades})
-
 
 #Defined  your own Stopwords in case the clean data function does not remove all of them
 stop_words = ['verse','im','get','1000','58','60','80','youre','youve',
-               'guitar','solo','instrumental','intro','pre',"3","yo","yeah"]
+              'guitar','solo','instrumental','intro','pre',"3"]
 
-# count the frequency of each word that don't have on the stop_words lists          
+# count the frequency of each word that aren't on the stop_words lists
 cv = CountVectorizer(stop_words=stop_words)
 
 #Create a dataframe called data_cv to store the the number of times the word was used in  a lyric based their decades
 text_cv = cv.fit_transform(words_df['words'].iloc[:])
-print(text_cv)
-data_cv = pd.DataFrame(text_cv,columns=cv.get_feature_names())
+data_cv = pd.DataFrame(text_cv.toarray(),columns=cv.get_feature_names())
 data_cv['decade'] = words_df['decade']
 
 #created a dataframe that Sums the ocurrence frequency of each word and group the result by decade
