@@ -1,5 +1,6 @@
 from geniusLyricsLib import *
 import pandas as pd 
+from tqdm import tqdm
 
 #To plot the graphs
 from wordcloud import WordCloud
@@ -39,12 +40,11 @@ except:
 ############ STEP 2) cleaning and transforming the data using functions created on helpers script
 ####################################
 
-print(">>> Adicionando decadas")
-df.to_csv('raw.csv',index=False)
-df = create_decades(df)
-
 #Filter data to use songs that have lyrics.
 df = df[df['lyric'].notnull()]
+
+print(">>> Adicionando decadas")
+df = create_decades(df)
 
 ####################################
 ############ STEP 3) Stores unique words of each lyrics song into a new column called words 
