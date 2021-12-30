@@ -43,16 +43,16 @@ import nltk.data
 
 access_token = '5yWU82ZtyFHn9FBRC314WtNowapfuTFRwMho-82bR3gCmWFzwaekAV2oYqdHAsLm'
 
-try:
-    df = pd.read_csv("raw.csv")
-except:
-    #Extracting the information of the N most popular songs of Metallica
-    df0 = build_discography_data(['Metallica', 'Megadeth', 'AC/DC', 'Guns N Roses', 'Iron Maiden', \
-                                'Red Hot Chili Peppers', 'Nirvana', 'Aerosmith', 'The Rolling Stones', \
-                                'Queen', 'U2', 'Judas Priest', 'Bon Jovi', 'Kiss', 'Pink Floyd', 'Dire straits', \
-                                'Ramones', 'Green Day', 'The cure', 'Blondie'],1000,access_token)
 
-    df = clean_lyrics(df0,'lyric')
+#Extracting the information of the N most popular songs of Metallica
+df0 = build_discography_data(['Eagles', 'Fleetwood Mac', 'Linkin Park', 'Maroon 5', 'Van Halen', 
+                                'Journey', 'Creedence Clearwater Revival', 'Santana', 'Chicago', 'The Who', 
+                                'The Beach Boys', 'The Doors', 'Lynyrd Skynyrd', 'Pearl Jam', 'Foreigner', 
+                                'Black Sabbath', 'Def Leppard', 'The Police', 'ABBA', 'Genesis', 
+                                'Rush', 'Radiohead', 'The Killers', 'Dio', 'Slipknot', 'Van Halen',
+                                'System of a Down', 'Anthrax', 'Lamb of God', 'Blue Oyster Cult', 'Exodus'],1000,access_token)
+
+df = clean_lyrics(df0,'lyric')
 
 
 ####################################
@@ -60,15 +60,12 @@ except:
 ####################################
 
 
-#df.to_csv('raw.csv',index=False)
+df.to_csv('raw_new.csv',index=False)
 
 df = create_decades(df)
 
 #Filter  data to use songs that have lyrics.
 df = df[df['lyric'].notnull()]
-
-df.to_csv('lyrics.csv',index=False)
-
 
 
 ####################################
