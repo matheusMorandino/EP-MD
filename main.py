@@ -42,6 +42,9 @@ except:
 
 #Filter data to use songs that have lyrics.
 df = df[df['lyric'].notnull()]
+df['lyric'] = df['lyric'].apply(lambda x: ''.join([i for i in x if not i.isdigit()]))
+
+df.to_csv('raw_new.csv',index=False)
 
 print(">>> Adicionando decadas")
 df = create_decades(df)
