@@ -1,7 +1,7 @@
 # - csv header: artist,title,album,decade,year,lyric,negative,neutral,positive,compound
 import csv
 
-chaves = ["(live", "live)", "[live", "live]", "live at", "version", "acoustic", "demo", "mix", "remix", "remastered ", "greatest hits ", "rock in rio"]
+chaves = ["(live", "live)", "[live", "live]", "- live", "live at", "version", "acoustic", "demo", "mix", "remix", "remastered", "remaster", "greatest hits", "anthology", "edit", "tradu", "rock in rio", "bbc", "español", "film transcript", "türkçe"]
 
 def paraRemover(row):
 	for chave in chaves:
