@@ -78,7 +78,6 @@ if __name__ == "__main__":
         'vect__smooth_idf': (True, False),
         'clf__loss': ('hinge', 'squared_hinge'),
         'clf__dual': (True, False),
-        'clf__class_weight': (True, False),
     }
 
     print(">>>Applying grid seach")
