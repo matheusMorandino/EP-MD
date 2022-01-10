@@ -1,0 +1,90 @@
+>>>Applying grid seach
+>>>Generanting test/train split
+Fitting 5 folds for each of 72 candidates, totalling 360 fits
+0 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.77; std - 0.01
+1 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.76; std - 0.01
+2 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.76; std - 0.01
+3 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.77; std - 0.02
+4 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.76; std - 0.01
+5 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+6 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.76; std - 0.02
+7 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+8 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.73; std - 0.01
+9 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+10 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.72; std - 0.01
+11 params - {'clf__criterion': 'gini', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+12 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.76; std - 0.02
+13 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.76; std - 0.01
+14 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.77; std - 0.01
+15 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.77; std - 0.02
+16 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.76; std - 0.01
+17 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+18 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.76; std - 0.02
+19 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+20 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.72; std - 0.01
+21 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.73; std - 0.01
+22 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.73; std - 0.01
+23 params - {'clf__criterion': 'gini', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+24 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.72; std - 0.01
+25 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+26 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.73; std - 0.01
+27 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.73; std - 0.01
+28 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.70; std - 0.01
+29 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.70; std - 0.01
+30 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.71; std - 0.01
+31 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.71; std - 0.01
+32 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.69; std - 0.01
+33 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.69; std - 0.01
+34 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.70; std - 0.01
+35 params - {'clf__criterion': 'gini', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.70; std - 0.01
+36 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.76; std - 0.02
+37 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.77; std - 0.01
+38 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.77; std - 0.02
+39 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+40 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.76; std - 0.01
+41 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+42 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.76; std - 0.01
+43 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.76; std - 0.01
+44 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.72; std - 0.01
+45 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+46 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.72; std - 0.01
+47 params - {'clf__criterion': 'entropy', 'clf__max_features': 'auto', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+48 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.77; std - 0.01
+49 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+50 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.77; std - 0.02
+51 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.77; std - 0.02
+52 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.76; std - 0.02
+53 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.76; std - 0.02
+54 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.76; std - 0.01
+55 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.76; std - 0.01
+56 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.72; std - 0.01
+57 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+58 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.72; std - 0.01
+59 params - {'clf__criterion': 'entropy', 'clf__max_features': 'sqrt', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.72; std - 0.01
+60 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.73; std - 0.01
+61 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.73; std - 0.01
+62 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.73; std - 0.01
+63 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 1), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.73; std - 0.01
+64 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.71; std - 0.01
+65 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.71; std - 0.01
+66 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.71; std - 0.01
+67 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (1, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.71; std - 0.01
+68 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': True}; mean - 0.69; std - 0.00
+69 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l1', 'vect__smooth_idf': False}; mean - 0.70; std - 0.01
+70 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': True}; mean - 0.70; std - 0.01
+71 params - {'clf__criterion': 'entropy', 'clf__max_features': 'log2', 'vect__ngram_range': (2, 2), 'vect__norm': 'l2', 'vect__smooth_idf': False}; mean - 0.70; std - 0.01
+>>>Printing results
+              precision    recall  f1-score   support
+
+         neg       0.87      0.55      0.67       843
+         pos       0.77      0.95      0.85      1326
+
+    accuracy                           0.79      2169
+   macro avg       0.82      0.75      0.76      2169
+weighted avg       0.81      0.79      0.78      2169
+
+>tp: 1255
+>fp: 382
+>tn: 461
+>fn: 71
+>test acc : 0.7911479944674965

@@ -6,6 +6,10 @@ from sklearn.exceptions import ConvergenceWarning
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 from sklearn.linear_model import SGDClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.gaussian_process.kernels import RBF
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
@@ -66,18 +70,17 @@ if __name__ == "__main__":
     # Pipeline for applying gridseach later
     pipeline = Pipeline([
         ('vect', TfidfVectorizer(min_df=3, max_df=0.95)),
-        ('clf', LinearSVC(C=1000, max_iter=9999999, dual=True)),
+        ('clf', AdaBoostClassifier()),
     ])
 
     # Fit the pipeline on the training set using grid search for the parameters  
     parameters = {
         'vect__ngram_range': [(1, 1), (1, 2), (2, 2)],
-        'vect__use_idf': (True, False),
         'vect__norm': ('l1', 'l2'),
-        'vect__sublinear_tf': (True, False),
         'vect__smooth_idf': (True, False),
-        'clf__loss': ('hinge', 'squared_hinge'),
-        'clf__dual': (True, False),
+        'clf__n_estimators': (30, 50, 100, 200, 400, 600),
+	'clf__learning_rate': (0.3, 0.6, 1, 2),
+	'clf__algorithm': ('SAMME', 'SAMME.R')
     }
 
     print(">>>Applying grid seach")
